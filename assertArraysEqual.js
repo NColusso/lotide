@@ -3,22 +3,22 @@ const eqArrays = function(array1, array2) {
   if (array1.length === array2.length) {
     for (let i = 0; i < array1.length; i ++) {
       if (array1[i] !== array2[i]) {
-        matching = false
+        matching = false;
       }
     }
   } else {
-    matching = false
+    matching = false;
   }
-  return matching
+  return matching;
 }
 
 const assertArraysEqual = function(array1, array2) {
 //  let result = eqArrays(array1, array2)
 //   console.log(result)
   if (eqArrays(array1, array2)) {
-    console.log("🟢The arrays are equal")
+    console.log("🟢The arrays are equal");
   } else {
-    console.log("🔴The arrays are not equal")
+    console.log("🔴The arrays are not equal");
   }
 }
 // tests:
