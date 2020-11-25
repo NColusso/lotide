@@ -17,7 +17,7 @@ const eqArrays = function(array1, array2) {
   } else {
     matching = false
   }
-  console.log(matching)
+  return matching
 }
 
 // test cases:
