@@ -18,7 +18,7 @@ const eqArrays = function(array1, array2) {
     matching = false;
   }
   return matching;
-}
+};
 
 // test cases:
 eqArrays([1, 2, 3], [1, 2, 3]) // => true
