@@ -1,14 +1,6 @@
 const countOnly = require("../countOnly");
 const assert = require('chai').assert;
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 
 // tests:
 
@@ -24,9 +16,11 @@ const firstNames = [
   "Joe"
 ];
 
-// const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
+const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
 
-// assertEqual(result1["Jason"], 1);
-// assertEqual(result1["Karima"], undefined);
-// assertEqual(result1["Fang"], 2);
-// assertEqual(result1["Agouhanna"], undefined);
+
+describe("#countOnly", () => {
+  it("returns {Fang: 2, Jason: 1} when taking in firstNames and results1", () => {
+    assert.deepEqual(countOnly(firstNames, result1), {Fang: 2, Jason: 1})
+  })
+});

@@ -2,22 +2,18 @@ const assert = require("chai").assert;
 const findKeyByValue = require("../findKeyByValue");
 
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
+const bestTVShowsByGenre = {
+  sci_fi: "The Expanse",
+  comedy: "Brooklyn Nine-Nine",
+  drama:  "The Wire"
 };
 
-// tests:
-// const bestTVShowsByGenre = {
-//   sci_fi: "The Expanse",
-//   comedy: "Brooklyn Nine-Nine",
-//   drama:  "The Wire"
-// };
+describe("#findKeyByValue", () => {
+  it("returns drama when looking for The Wire in bestTVShowsByGenre", () => {
+    assert.strictEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama")
+  })
 
-// console.log(findKeyByValue(bestTVShowsByGenre, "The Wire"));
-
-// assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-// assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+  it("returns undefined when looking for That '70s show in bestTVShowsByGenre", () => {
+    assert.isUndefined(findKeyByValue(bestTVShowsByGenre, "That '70s Show"))
+  })
+});

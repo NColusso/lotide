@@ -1,7 +1,7 @@
 const assert = require("chai").assert
 const middle = require("../middle")
 
-describe("Head", () => {
+describe("#middle", () => {
   it("return [] for [1]", () => {
     assert.deepEqual(middle([1]), []);
   });

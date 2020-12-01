@@ -1,3 +1,4 @@
+// Will count how many times a letter appears in a given sentence and return the counts as an object
 
 const countletters = function(sentence) {
   const letterCount = {};
