@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@ncolusso/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simpler copy of lodash created for learning purposes while attending Lighthouse Labs",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/NColusso/lotide.git"
   },
-  "author": "",
+  "author": "Natasha Colusso <natashacolusso@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/NColusso/lotide/issues"
